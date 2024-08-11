@@ -1,7 +1,7 @@
 <template>
     <div class="flex justify-between flex-col gap-8 p-10 bg-[#272727]">
         <div class="flex flex-col">
-            <NuxtImg class="w-32 cursor-pointer" src="/logo1.png" />
+            <img class="w-32 cursor-pointer" src="/logo1.png" />
         </div>
         <div class="flex flex-col gap-3">
             <h3 class="text-white underline decoration-4 text-md font-bold">Contacto</h3>
