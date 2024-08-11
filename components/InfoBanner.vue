@@ -23,7 +23,7 @@ const isMobile = () => {
             <div class="flex flex-col justify-center gap-10">
                 <h2 class="text-4xl font-bold text-left">{{ title }}</h2>
                 <p class="text-xl text-left">{{ text }}</p>
-                <Button button-text="Saber más" class="text-xl text-left text-black bg-orange-500" />
+                <Button button-text="Saber más" class="rounded-md text-xl text-left text-white bg-orange-500" />
                 <!-- La diferencia entre el binding con : y sin es que el de : es dinamico, para variables, y el sin, es para texto y demas -->
             </div>
         </div>
@@ -40,7 +40,7 @@ const isMobile = () => {
                 <div class="flex flex-col justify-top mt-12 py-10 px-20 w-[50vw] h-full gap-10">
                     <h2 class="text-4xl font-bold text-left">{{ title }}</h2>
                     <p class="text-xl text-left">{{ text }}</p>
-                    <Button button-text="Pedir presupuesto" class="text-xl text-left text-black bg-orange-500" />
+                    <Button button-text="Pedir presupuesto" class="text-xl text-left text-white bg-orange-500" />
                 </div>
             </desktop>
         </div>
@@ -49,7 +49,7 @@ const isMobile = () => {
                 <div class="flex flex-col gap-8 px-10 mt-10">
                     <h2 class="text-4xl font-bold text-left">{{ title }}</h2>
                     <p class="text-xl text-left">{{ text }}</p>
-                    <Button button-text="Pedir presupuesto" class="text-xl text-left text-black bg-orange-500" />
+                    <Button button-text="Pedir presupuesto" class="text-xl text-left text-white rounded-md bg-orange-500" />
                 </div>
                 <div class="mt-10">
                     <img src="/main5.jpeg" alt="Background Image" class="object-cover h-[50vh] w-full" />

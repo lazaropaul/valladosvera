@@ -84,4 +84,8 @@ const text2 = "Con nuestro servicio de solicitud de presupuesto, te ofrecemos la
 
     </main>
 
+    <footer>
+        <Footer />
+    </footer>
+
 </template>
