@@ -12,22 +12,30 @@
             </div>
         </div>
 
-        <div class="flex flex-col gap-3">
+        <div class="flex flex-col gap-3 h-auto">
             <h3 class="text-white underline decoration-4 text-md font-bold">Servicios</h3>
-            <div class="flex items-center gap-6 text-white">
-                <NuxtLink to="/about">¿Quienes somos?</NuxtLink>
-                <NuxtLink to="/about">Trabaja con nosotros</NuxtLink>
-                <NuxtLink to="/about">Trabajos realizados</NuxtLink>
+            <div class="flex flex-col justify-between gap-2 text-white leading-tight">
+                <NuxtLink to="/about" >Instalación de estructuras, puertas y vallados</NuxtLink>
+                <NuxtLink to="/about">Mantenimiento y reparación</NuxtLink>
+                <NuxtLink to="/about">Limpieza de parcelas</NuxtLink>
+                <NuxtLink to="/about">Servicio de soldadura</NuxtLink>
             </div>
         </div>
-
         <div class="flex flex-col gap-3">
             <h3 class="text-white underline decoration-4 text-md font-bold">¿Te ayudamos?</h3>
-            <div class="flex items-center gap-6 text-white">
+            <div class="flex flex-col gap-2 text-white">
                 <NuxtLink to="/about">¿Quienes somos?</NuxtLink>
                 <NuxtLink to="/about">Trabaja con nosotros</NuxtLink>
                 <NuxtLink to="/about">Trabajos realizados</NuxtLink>
             </div>
         </div>
     </div>
+
+    <hr>
+
+    <div class="flex justify-between gap-4 p-4 bg-[#272727]">
+        <p class="text-white">© 2024 Vallados Vera</p>
+        <p class="text-white">Made by <NuxtLink to="https://github.com/rikwsb" class="underline">@rikwsb</NuxtLink></p>
+    </div>
+
 </template>

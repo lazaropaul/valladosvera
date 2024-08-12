@@ -32,8 +32,8 @@ const text2 = "Con nuestro servicio de solicitud de presupuesto, te ofrecemos la
                                         <p class="text-base text-gray-700">Instalación personalizada de vallados y
                                             estructuras metalicas</p>
                                     </div>
-                                    <div class="px-6 py-4">
-                                        <span>Saber más</span>
+                                    <div class="px-6 py-4 flex justify-end">
+                                        <Button buttonText="Saber más" class="bg-orange-500 rounded-md text-white font-bold w-full" />
                                     </div>
                                 </div>
                             </li>
@@ -45,8 +45,8 @@ const text2 = "Con nuestro servicio de solicitud de presupuesto, te ofrecemos la
                                         <p class="text-base text-gray-700">Instalación personalizada de vallados y
                                             estructuras metalicas</p>
                                     </div>
-                                    <div class="px-6 py-4">
-                                        <span>Saber más</span>
+                                    <div class="px-6 py-4 flex justify-end">
+                                        <Button buttonText="Saber más" class="bg-orange-500 rounded-md text-white font-bold w-full" />
                                     </div>
                                 </div>
                             </li>
@@ -58,8 +58,8 @@ const text2 = "Con nuestro servicio de solicitud de presupuesto, te ofrecemos la
                                         <p class="text-base text-gray-700">Instalación personalizada de vallados y
                                             estructuras metalicas</p>
                                     </div>
-                                    <div class="px-6 py-4">
-                                        <span>Saber más</span>
+                                    <div class="px-6 py-4 flex justify-end">
+                                        <Button buttonText="Saber más" class="bg-orange-500 rounded-md text-white font-bold w-full" />
                                     </div>
                                 </div>
                             </li>
@@ -71,8 +71,8 @@ const text2 = "Con nuestro servicio de solicitud de presupuesto, te ofrecemos la
                                         <p class="text-base text-gray-700">Instalación personalizada de vallados y
                                             estructuras metalicas</p>
                                     </div>
-                                    <div class="px-6 py-4">
-                                        <span>Saber más</span>
+                                    <div class="px-6 py-4 flex justify-end">
+                                        <Button buttonText="Saber más" class="bg-orange-500 rounded-md text-white font-bold w-full" />
                                     </div>
                                 </div>
                             </li>

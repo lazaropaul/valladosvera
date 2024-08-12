@@ -1,6 +1,9 @@
 <script setup>
-const title1 = "Soluciones a medida para tu hogar o negocio";
-const text1 = "Ofrecemos todo tipo de vallados, puertas y estructuras metalicas, madera, plastico, PVC y demás materiales. Informate aqui de los materiales que disponemos.";
+
+defineProps({
+    headline: String,
+    headImage: String,
+})
 
 //Funcion para saber si estamos en un dispositivo movil
 const isMobile = () => {
@@ -35,7 +38,5 @@ const isMobile = () => {
         </mobile>
       </div>
     </div>
-
-    <InfoBanner :image-position="true" :title="title1" :text="text1" />
   </div>
 </template>
