@@ -8,7 +8,7 @@ const text2 = "Con nuestro servicio de solicitud de presupuesto, te ofrecemos la
 <template>
     <NavBar />
 
-    <main class="">
+    <main>
         <MainHeader />
 
         <InfoBanner :imagePosition="false" :title="title2" :text="text2" />

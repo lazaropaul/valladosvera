@@ -1,3 +1,4 @@
 <template>
-    <SecondaryHeader headline="Contáctanos"/>
+    <SecondaryHeader headline="Contáctanos" head-image=""/>
+    <ContactForm />
 </template>

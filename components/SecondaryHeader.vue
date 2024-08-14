@@ -24,17 +24,12 @@ const isMobile = () => {
       <div class="md:w-2/4">
         <desktop v-if="!isMobile()">
           <h1 class="text-4xl font-bold md:leading-tight md:text-5xl"><mark
-              class="px-3 py-1 text-white bg-orange-500 ">Protección y Calidad en Cada</mark></h1>
-          <h1 class="text-4xl font-bold md:leading-tight md:text-5xl"><mark
-              class="px-3 py-1 text-white bg-orange-500">Vallado</mark></h1>
+              class="px-3 py-1 text-white bg-orange-500 ">{{ headline }}</mark></h1>
         </desktop>
         <mobile v-else>
           <h1 class="text-4xl font-bold leading-tight md:text-5xl"><mark
-              class="px-3 py-1 text-white bg-orange-500 ">Cerramientos </mark></h1>
-          <h1 class="text-4xl font-bold leading-tight md:text-5xl"><mark
-                class="px-3 py-1 text-white bg-orange-500 ">metalicos, PVC,</mark></h1>
-          <h1 class="text-4xl font-bold leading-tight md:text-5xl"><mark
-              class="px-3 py-1 text-white bg-orange-500">madera y más</mark></h1>
+              class="px-3 py-1 text-white bg-orange-500 ">{{ headline }}</mark></h1>
+          
         </mobile>
       </div>
     </div>
