@@ -36,7 +36,9 @@
                 </ul>
             </div>
             <div class="flex items-center gap-6 w-50">
-                <Button buttonText="Contactar" class="bg-orange-500 text-white hover:bg-orange-600" />
+                <NuxtLink to="/contacto" class="hover:text-gray-500">
+                    <Button buttonText="Contactar" class="bg-orange-500 text-white hover:bg-orange-600" />
+                </NuxtLink>
                 <NuxtImg src="/menu-outline.svg" @click="onToggleMenu(this)" name="menu" class="cursor-pointer md:hidden h-14" />
             </div>
         </nav>
