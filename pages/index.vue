@@ -14,17 +14,17 @@ const text2 = "Con nuestro servicio de solicitud de presupuesto, te ofrecemos la
         <InfoBanner :imagePosition="false" :title="title2" :text="text2" />
 
         <section>
-            <div class="flex-col bg-orange-500 justify-center md:rounded-md md:mx-20 md:h-[50vh] md:mt-0">
+            <div class="flex-col bg-orange-500 justify-center md:rounded-md md:mx-20 md:h-[50vh] md:mt-0 md:h-auto md:pb-16 md:mb-20">
                 <div class="flex md:justify-center">
                     <div class="w-2/4 p-10 md:my-5">
                         <h2 class="text-6xl font-bold text-center text-white">Nuestros Servicios</h2>
                         <!-- <p class="text-center">Conoce todos nuestros servicio</p> -->
                     </div>
                 </div>
-                <div class="flex justify-center mt-6 md:h-[50vh]">
+                <div class="flex justify-center mt-6 md:h-[50vh] md:px-10">
                     <div class="flex-col justify-center w-5/6">
-                        <ul class="justify-between md:flex">
-                            <li>
+                        <ul class="justify-between md:flex md:w-full md:justify-around">
+                            <li class="md:p-5">
                                 <div class="max-w-sm mb-5 overflow-hidden bg-white rounded shadow-lg">
                                     <img class="w-full object-cover h-[25vh]" src="/main4.jpeg" alt="Sunset in the mountains" />
                                     <div class="px-6 py-4">
@@ -37,7 +37,7 @@ const text2 = "Con nuestro servicio de solicitud de presupuesto, te ofrecemos la
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            <li class="md:p-5">
                                 <div class="max-w-sm mb-5 overflow-hidden bg-white rounded shadow-lg">
                                     <img class="w-full object-cover h-[25vh]" src="/main5.jpeg" alt="Sunset in the mountains" />
                                     <div class="px-6 py-4">
@@ -50,7 +50,7 @@ const text2 = "Con nuestro servicio de solicitud de presupuesto, te ofrecemos la
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            <li class="md:p-5">
                                 <div class="max-w-sm mb-5 overflow-hidden bg-white rounded shadow-lg">
                                     <img class="w-full object-cover h-[25vh]" src="/main6.jpeg" alt="Sunset in the mountains" />
                                     <div class="px-6 py-4">
@@ -63,7 +63,7 @@ const text2 = "Con nuestro servicio de solicitud de presupuesto, te ofrecemos la
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            <li class="md:p-5">
                                 <div class="max-w-sm mb-5 overflow-hidden bg-white rounded shadow-lg ">
                                     <img class="w-full object-cover h-[25vh]" src="/main7.jpeg" alt="Sunset in the mountains" />
                                     <div class="px-6 py-4">
