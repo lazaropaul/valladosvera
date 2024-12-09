@@ -19,19 +19,19 @@
                 class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
                 <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
                     <li>
-                        <a class="hover:text-gray-500" href="#">Products</a>
+                        <NuxtLink class="hover:text-orange-500 text-3xl font-semibold" to="/">
+                            Inicio
+                        </NuxtLink>
                     </li>
                     <li>
-                        <a class="hover:text-gray-500" href="#">Solution</a>
+                        <NuxtLink class="hover:text-orange-500 text-3xl font-semibold" to="/servicios">
+                            Servicios
+                        </NuxtLink>
                     </li>
                     <li>
-                        <a class="hover:text-gray-500" href="#">Resource</a>
-                    </li>
-                    <li>
-                        <a class="hover:text-gray-500" href="#">Developers</a>
-                    </li>
-                    <li>
-                        <a class="hover:text-gray-500" href="#">Pricing</a>
+                        <NuxtLink class="hover:text-orange-500 text-3xl font-semibold" to="/nosotros">
+                            Nosotros
+                        </NuxtLink>
                     </li>
                 </ul>
             </div>
