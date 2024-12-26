@@ -1,7 +1,12 @@
 <template>
-    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-colors duration-300">
+    <nav class="fixed top-0 left-0 w-full z-50 transition-colors duration-300">
         <!-- Main navbar container with higher z-index -->
-        <div class="bg-gray/50 backdrop-blur-3xl flex justify-between items-center w-[90%] h-[7vh] p-7 mt-6 mx-auto rounded relative z-50">
+        <div :class="[
+                    'bg-gray/50',
+                    isMenuOpen && isMobile ? null : 'backdrop-blur-3xl',
+                    'flex justify-between items-center',
+                    'w-[90%] h-[7vh] p-7 mt-6 mx-auto',
+                    'rounded relative z-50']">
             <!-- Logo container with highest z-index -->
             <div class="relative z-50">
                 <desktop v-if="!isMobile">
@@ -17,17 +22,20 @@
             <div :class="[
                 'fixed md:static top-0 right-0 h-screen md:h-auto w-full md:w-auto',
                 'bg-white md:bg-transparent',
+                'text-gray-900',
                 'duration-500 ease-in-out',
                 'flex flex-col md:flex-row items-center justify-center',
                 'z-40',
                 isMenuOpen && isMobile ? null : 'translate-x-full',
-                'md:!translate-x-0'
+                'md:!translate-x-0',
+                isMenuOpen && isMobile ? null : '!bg-transparent',
+                'bg-white'
             ]">
                 <!-- Optional backdrop for mobile menu -->
                 <div v-if="isMenuOpen" class="fixed inset-0 bg-opacity-50 md:hidden z-40" @click="toggleMenu">
                 </div>
 
-                <ul class="flex text-slate-100 md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 relative z-50">
+                <ul class="flex md:text-slate-100 md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 relative z-50">
                     <li>
                         <NuxtLink class="text-3xl font-semibold hover:text-orange-500" to="/">
                             Inicio
