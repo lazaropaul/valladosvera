@@ -37,7 +37,7 @@ const text1 = "Seas particular o empresa, adaptamos tu proyecto para que pueda s
                         <ul class="justify-between md:flex md:w-full md:justify-around">
                             <li class="md:p-5">
                                 <div class="max-w-sm mb-5 overflow-hidden bg-white rounded shadow-lg">
-                                    <NuxtImg class="w-full object-cover h-[25vh]" src="/main4.jpeg" alt="Sunset in the mountains" />
+                                    <img class="w-full object-cover h-[25vh]" src="/main4.jpeg" alt="Sunset in the mountains" />
                                     <div class="px-6 py-4">
                                         <div class="mb-2 text-xl font-bold">Instalación de estructuras, puertas y vallados</div>
                                         <p class="text-base text-gray-700">Instalación personalizada de vallados y
@@ -50,7 +50,7 @@ const text1 = "Seas particular o empresa, adaptamos tu proyecto para que pueda s
                             </li>
                             <li class="md:p-5">
                                 <div class="max-w-sm mb-5 overflow-hidden bg-white rounded shadow-lg">
-                                    <NuxtImg class="w-full object-cover h-[25vh]" src="/main5.jpeg" alt="Sunset in the mountains" />
+                                    <img class="w-full object-cover h-[25vh]" src="/main5.jpeg" alt="Sunset in the mountains" />
                                     <div class="px-6 py-4">
                                         <div class="mb-2 text-xl font-bold">Mantenimiento y reparación</div>
                                         <p class="text-base text-gray-700">Instalación personalizada de vallados y
@@ -63,7 +63,7 @@ const text1 = "Seas particular o empresa, adaptamos tu proyecto para que pueda s
                             </li>
                             <li class="md:p-5">
                                 <div class="max-w-sm mb-5 overflow-hidden bg-white rounded shadow-lg">
-                                    <NuxtImg class="w-full object-cover h-[25vh]" src="/main6.jpeg" alt="Sunset in the mountains" />
+                                    <img class="w-full object-cover h-[25vh]" src="/main6.jpeg" alt="Sunset in the mountains" />
                                     <div class="px-6 py-4">
                                         <div class="mb-2 text-xl font-bold">Servicio de "manitas"</div>
                                         <p class="text-base text-gray-700">Instalación personalizada de vallados y
@@ -76,7 +76,7 @@ const text1 = "Seas particular o empresa, adaptamos tu proyecto para que pueda s
                             </li>
                             <li class="md:p-5">
                                 <div class="max-w-sm mb-5 overflow-hidden bg-white rounded shadow-lg ">
-                                    <NuxtImg class="w-full object-cover h-[25vh]" src="/main7.jpeg" alt="Sunset in the mountains" />
+                                    <img class="w-full object-cover h-[25vh]" src="/main7.jpeg" alt="Sunset in the mountains" />
                                     <div class="px-6 py-4">
                                         <div class="mb-2 text-xl font-bold">Limpieza de parcelas</div>
                                         <p class="text-base text-gray-700">Instalación personalizada de vallados y

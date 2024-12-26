@@ -5,10 +5,10 @@
             <!-- Logo container with highest z-index -->
             <div class="relative z-50">
                 <desktop v-if="!isMobile">
-                    <NuxtImg class="w-32 cursor-pointer" src="/logo3.png" alt="..." />
+                    <img class="w-32 cursor-pointer" src="/logo3.png" alt="..." />
                 </desktop>
                 <mobile v-else>
-                    <NuxtImg class="w-12 cursor-pointer" src="/logo4.svg" alt="..." />
+                    <img class="w-12 cursor-pointer" src="/logo4.svg" alt="..." />
                 </mobile>
             </div>
 
