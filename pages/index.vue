@@ -1,7 +1,17 @@
 <script setup>
 
-const title2 = "Pide tu presupuesto";
-const text2 = "Con nuestro servicio de solicitud de presupuesto, te ofrecemos la oportunidad de obtener un presupuesto adaptado a tus necesidades específicas. Nuestro equipo de expertos se encargará de realizar un estudio detallado, brindarte asesoramiento especializado y planificar cada detalle de tu proyecto";
+const title2 = "Diseño y Fabricación a Medida";
+const text2 = "Ofrecemos una amplia variedad de vallados y " +
+              "cerramientos metálicos diseñados para garantizar " + 
+              "la seguridad, durabilidad y estética de cualquier espacio." +
+              "Con materiales de alta calidad y un enfoque en la personalización, " +
+              "creamos soluciones adaptadas a tus necesidades, ya sea para " +
+              "uso residencial, comercial o industrial. Confía en nuestros " +
+              "expertos para transformar tus ideas en estructuras sólidas " + 
+              "que perduran en el tiempo.";
+
+const title1 = "Servicios";
+const text1 = "Seas particular o empresa, adaptamos tu proyecto para que pueda satisfacer tus necesidades";
 
 </script>
 
@@ -11,7 +21,8 @@ const text2 = "Con nuestro servicio de solicitud de presupuesto, te ofrecemos la
     <main>
         <MainHeader />
 
-        <InfoBanner :imagePosition="false" :title="title2" :text="text2" />
+        <InfoBannerLeft :imagePosition="false" :title="title2" :text="text2" />
+        <InfoBannerMiddle :image-position="true" :title="title1" :text="text1" />
 
         <section>
             <div class="flex-col bg-orange-500 justify-center md:rounded-md md:mx-20 md:h-[50vh] md:mt-0 md:h-auto md:pb-16 md:mb-20">

@@ -15,27 +15,66 @@ const isMobile = () => {
 
 <template>
   <!-- <NuxtImg src="/main.jpeg" /> -->
-  <div class="w-full h-auto md:z-49">
+  <div class="w-full h-lvh md:z-49">
     <div
-      class="bg-[url('/main.png')] h-3/4 bg-center bg-cover w-full flex md:flex-col justify-center md:p-56 md:p-20 py-56 px-10">
-      <div class="md:w-2/4">
-        <desktop v-if="!isMobile()">
-          <h1 class="text-4xl font-bold md:leading-tight md:text-5xl"><mark
-              class="px-3 py-1 text-white bg-orange-500 ">Protección y Calidad en Cada</mark></h1>
-          <h1 class="text-4xl font-bold md:leading-tight md:text-5xl"><mark
-              class="px-3 py-1 text-white bg-orange-500">Vallado</mark></h1>
-        </desktop>
-        <mobile v-else>
-          <h1 class="text-4xl font-bold leading-tight md:text-5xl"><mark
-              class="px-3 py-1 text-white bg-orange-500 ">Cerramientos </mark></h1>
-          <h1 class="text-4xl font-bold leading-tight md:text-5xl"><mark
-                class="px-3 py-1 text-white bg-orange-500 ">metalicos, PVC,</mark></h1>
-          <h1 class="text-4xl font-bold leading-tight md:text-5xl"><mark
-              class="px-3 py-1 text-white bg-orange-500">madera y más</mark></h1>
-        </mobile>
+      class="bg-[url('/main.webp')] h-full bg-center bg-cover w-full flex md:flex-col justify-center md:p-56 md:p-20 px-10">
+      <div class="md:w-full flex flex-col justify-center">
+        <h1 class="relative z-10 max-w-2xl">
+          <!-- <span
+            class="bg-orange-500 px-4 py-2 text-3xl md:text-5xl lg:text-6xl text-white font-bold rounded-md shadow-md"> -->
+            <mark class="text-5xl lg:text-6xl text-white font-bold">
+              Cerramientos, Puertas y Vallados
+            </mark>
+        </h1>
       </div>
     </div>
-
-    <InfoBanner :image-position="true" :title="title1" :text="text1" />
   </div>
 </template>
+
+<style scoped>
+/* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (max-width: 768px) {
+    mark {
+      /* margin: 0 0; */
+      line-height: 4rem;
+      padding: 0.1em 0.4em;
+      border-radius: 0.1em 0.1em;
+      background: transparent;
+      background-image: linear-gradient(
+        #ff7700,
+        #ff7700
+      );
+      /* background-image: linear-gradient(
+        to right,
+        rgba(255, 225, 0, 0.1),
+        rgba(255, 225, 0, 0.7) 4%,
+        rgba(255, 225, 0, 0.3)
+      ); */
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    mark {
+      /* margin: 0 0; */
+      line-height: 5rem;
+      padding: 0.1em 0.1em;
+      border-radius: 0;
+      background: transparent;
+      background-image: linear-gradient(
+        #ff7700,
+        #ff7700
+      );
+      /* background-image: linear-gradient(
+        to right,
+        rgba(255, 225, 0, 0.1),
+        rgba(255, 225, 0, 0.7) 4%,
+        rgba(255, 225, 0, 0.3)
+      ); */
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
+  }
+
+</style>
