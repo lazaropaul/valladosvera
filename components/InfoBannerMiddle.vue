@@ -28,39 +28,45 @@ const isMobile = () => {
                     </div>
                 </div>
                 <div class="md:flex mb-5">
-                    <div class="mt-5 md:px-10">
-                        <img src="/main5.jpeg" alt="Background Image" class="object-cover h-[50vh] w-full px-5 md:w-auto" />
+                    <div class="bg-[url('/main8.jpeg')] mt-5 md:px-10 h-[50vh] w-full">
+                        Hola
                     </div>
-                    <div class="mt-5 md:px-10">
-                        <img src="/main5.jpeg" alt="Background Image" class="object-cover h-[50vh] w-full px-5 md:w-auto" />
+                    <div class="bg-[url('/main8.jpeg')] mt-5 md:px-10 h-[50vh] w-full">
+                        Hola
                     </div>
-                    <div class="mt-5 md:px-10">
-                        <img src="/main5.jpeg" alt="Background Image" class="object-cover h-[50vh] w-full px-5 md:w-auto" />
+                    <div class="bg-[url('/main8.jpeg')] mt-5 md:px-10 h-[50vh] w-full">
+                        Hola
                     </div>
-                    <div class="mt-5 md:px-10">
-                        <img src="/main5.jpeg" alt="Background Image" class="object-cover h-[50vh] w-full px-5 md:w-auto" />
+                    <div class="bg-[url('/main8.jpeg')] mt-5 md:px-10 h-[50vh] w-full">
+                        Hola
                     </div>
                 </div>
             </div>
             <div v-else>
-                <div class="flex flex-col gap-8 px-10 mt-10 md:w-full">
-                    <h2 class="text-5xl font-bold text-left">{{ title }}</h2>
-                    <p class="text-xl text-left">{{ text }}</p>
-                    <Button button-text="Ver todos los materiales"
-                        class="text-xl text-left text-white rounded-md bg-orange-500 font-semibold pl-4" />
+                <div class="flex flex-col gap-8 px-20 mt-10 mb-10 md:w-full">
+                    <h2 class="text-5xl font-bold text-right">{{ title }}</h2>
+                    <p class="text-xl text-right">{{ text }}</p>
                 </div>
-                <div class="md:flex">
-                    <div class="mt-10 md:px-10">
-                        <img src="/main5.jpeg" alt="Background Image" class="object-cover h-[50vh] w-full px-5 md:w-auto" />
+                <div class="md:flex px-20 gap-5 mb-20">
+                    <div class="bg-[url('/main8.jpeg')] bg-cover mt-5 p-10 h-[50vh] w-full">
+                        <div class="h-full w-full flex flex-col justify-end">
+                            <h3 class="text-white text-3xl font-bold">Hola que taaaal</h3>
+                        </div>
                     </div>
-                    <div class="mt-10 md:px-10">
-                        <img src="/main5.jpeg" alt="Background Image" class="object-cover h-[50vh] w-full px-5 md:w-auto" />
+                    <div class="bg-[url('/main8.jpeg')] bg-cover mt-5 p-10 h-[50vh] w-full">
+                        <div class="h-full w-full flex flex-col justify-end">
+                            <h3 class="text-white text-3xl font-bold">Hola que taaaal</h3>
+                        </div>
                     </div>
-                    <div class="mt-10 md:px-10">
-                        <img src="/main5.jpeg" alt="Background Image" class="object-cover h-[50vh] w-full px-5 md:w-auto" />
+                    <div class="bg-[url('/main8.jpeg')] bg-cover mt-5 p-10 h-[50vh] w-full">
+                        <div class="h-full w-full flex flex-col justify-end">
+                            <h3 class="text-white text-3xl font-bold">Hola que taaaal</h3>
+                        </div>
                     </div>
-                    <div class="mt-10 md:px-10">
-                        <img src="/main5.jpeg" alt="Background Image" class="object-cover h-[50vh] w-full px-5 md:w-auto" />
+                    <div class="bg-[url('/main8.jpeg')] bg-cover mt-5 p-10 h-[50vh] w-full">
+                        <div class="h-full w-full flex flex-col justify-end">
+                            <h3 class="text-white text-3xl font-bold">Hola que taaaal</h3>
+                        </div>
                     </div>
                 </div>
             </div>

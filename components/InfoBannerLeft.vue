@@ -19,7 +19,7 @@ const isMobile = () => {
 <template>
     <div>
         <div>
-            <div v-if="isMobile()">
+            <div v-if="isMobile()"> <!-- TODO: Fusionar el isMobile i el !isMobile en un sol div-->
                 <div class="md:flex">
                     <div class="flex flex-col gap-8 px-10 mt-10 md:w-2/4">
                         <h2 class="text-5xl font-bold text-left">{{ title }}</h2>
@@ -28,20 +28,23 @@ const isMobile = () => {
                             class="text-xl text-left text-white rounded-md bg-orange-500 font-semibold pl-4" />
                     </div>
                     <div class="mt-10 md:px-10">
-                        <img src="/main5.jpeg" alt="Background Image" class="object-cover h-[50vh] w-full px-6 md:w-auto" />
+                        <img src="/main5.jpeg" alt="Background Image" class="object-cover h-[60vh] w-full md:w-full" />
                     </div>
                 </div>
             </div>
             <div v-else>
-                <div class="md:flex">
-                    <div class="flex flex-col gap-8 px-10 mt-10 md:w-2/4">
-                        <h2 class="text-5xl font-bold text-left">{{ title }}</h2>
-                        <p class="text-xl text-left">{{ text }}</p>
+                <div class="md:flex h-auto"> <!-- TODO: FULL HEIGHT SCREEN -->
+                    <div class="flex flex-col justify-around md:w-5/12 pl-24 py-10 mt-10 gap-8">
+                        <div class="flex md:flex-col 3xl:flex-row gap-8">
+                            <h2 class="text-5xl font-bold text-left">{{ title }}</h2>
+                            <p class="text-xl text-left">{{ text }}</p>
+                        </div>
                         <Button button-text="Ver todos los materiales"
                             class="text-xl text-left text-white rounded-md bg-orange-500 font-semibold pl-4" />
                     </div>
-                    <div class="mt-10 md:px-10">
-                        <img src="/main5.jpeg" alt="Background Image" class="object-cover h-[50vh] w-full md:w-auto" />
+                    
+                    <div class="mt-10 md:px-20 md:w-7/12">
+                        <img src="/main5.jpeg" alt="Background Image" class="object-cover h-[55vh] w-full md:w-full" />
                     </div>
                 </div>
             </div>

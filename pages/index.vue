@@ -21,8 +21,11 @@ const text1 = "Seas particular o empresa, adaptamos tu proyecto para que pueda s
     <main>
         <MainHeader />
 
-        <InfoBannerLeft :imagePosition="false" :title="title2" :text="text2" />
-        <InfoBannerMiddle :image-position="true" :title="title1" :text="text1" />
+        <div class="md:flex md:flex-col gap-10">
+            <InfoBannerLeft :imagePosition="false" :title="title2" :text="text2" />
+            <hr style="border: 0.1rem solid #bfbfbf;" class="mx-20"/>
+            <InfoBannerMiddle :image-position="true" :title="title1" :text="text1" />
+        </div>
 
         <section>
             <div class="flex-col bg-orange-500 justify-center md:rounded-md md:mx-20 md:h-[50vh] md:mt-0 md:h-auto md:pb-16 md:mb-20">
