@@ -60,7 +60,7 @@
                     <Button buttonText="Contactar" class="text-white bg-orange-500 hover:bg-orange-600" />
                 </NuxtLink>
                 <button @click="toggleMenu" class="md:hidden text-gray-600 hover:text-gray-800 focus:outline-none">
-                    <NuxtImg :src="isMenuOpen ? '/close-outline.svg' : '/menu-outline.svg'" class="h-14 cursor-pointer"
+                    <img :src="isMenuOpen ? '/close-outline.svg' : '/menu-outline.svg'" class="h-14 cursor-pointer"
                         alt="Menu toggle" />
                 </button>
             </div>
