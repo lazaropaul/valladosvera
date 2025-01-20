@@ -23,11 +23,11 @@ const isMobile = () => {
                 <h2 class="text-5xl font-bold text-right">{{ title }}</h2>
                 <p class="text-xl text-right">{{ text }}</p>
             </div>
-            <div class="md:flex md:px-20 px-10 gap-5 mb-20">
-                <TitleCard />
-                <TitleCard />
-                <TitleCard />
-                <TitleCard />
+            <div class="md:flex md:px-20 px-10 gap-5 mb-20 w-full">
+                <TitleCard title="Cerramientos" image="/cerramiento.webp"/>
+                <TitleCard title="Vallados" image="/vallado_sarria.webp"/>
+                <TitleCard title="Puertas metalicas" image="/puerta.webp"/>
+                <TitleCard title="Trabajos metalúrgicos" image="/trabajo_metalurgico.webp"/>
             </div>
         </div>
 

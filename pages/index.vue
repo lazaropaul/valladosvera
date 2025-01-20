@@ -1,14 +1,9 @@
 <script setup>
 
-const title2 = "Diseño y Fabricación a Medida";
-const text2 = "Ofrecemos una amplia variedad de vallados y " +
-              "cerramientos metálicos diseñados para garantizar " + 
-              "la seguridad, durabilidad y estética de cualquier espacio." +
-              "Con materiales de alta calidad y un enfoque en la personalización, " +
-              "creamos soluciones adaptadas a tus necesidades, ya sea para " +
-              "uso residencial, comercial o industrial. Confía en nuestros " +
-              "expertos para transformar tus ideas en estructuras sólidas " + 
-              "que perduran en el tiempo.";
+const title2 = "Sobre Nosotros";
+const text2 = "Somos especialistas en la fabricación e instalación de vallados, cerramientos y puertas metálicas de alta calidad. " +
+              "Nos destacamos por nuestra atención al detalle y nuestro compromiso con la excelencia. Cada proyecto, desde un simple vallado residencial hasta complejos cerramientos industriales, recibe la misma dedicación y profesionalidad. Utilizamos materiales de primera calidad y técnicas avanzadas de soldadura y acabado para garantizar productos duraderos y estéticamente atractivos." +
+              "La seguridad y satisfacción de nuestros clientes son nuestra máxima prioridad. Por ello, ofrecemos un servicio integral que incluye asesoramiento técnico, diseño personalizado, fabricación e instalación profesional.";
 
 const title1 = "Servicios";
 const text1 = "Seas particular o empresa, adaptamos tu proyecto para que pueda satisfacer tus necesidades";
@@ -31,7 +26,7 @@ const text1 = "Seas particular o empresa, adaptamos tu proyecto para que pueda s
             <div class="flex-col bg-orange-500 justify-center md:rounded-md md:mx-20 md:mt-0 md:h-auto md:pb-16 md:mb-20">
                 <div class="flex md:justify-center">
                     <div class="w-2/4 p-10 md:my-5">
-                        <h2 class="text-6xl font-bold text-center text-white">Nuestros Servicios</h2>
+                        <h2 class="text-6xl font-bold text-center text-white">Últimos trabajos</h2>
                         <!-- <p class="text-center">Conoce todos nuestros servicio</p> -->
                     </div>
                 </div>
@@ -55,6 +50,9 @@ const text1 = "Seas particular o empresa, adaptamos tu proyecto para que pueda s
                 </div>
             </div>
         </section>
+
+        
+        <ContactForm />
 
     </main>
 

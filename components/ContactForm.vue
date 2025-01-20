@@ -30,6 +30,14 @@ const state = reactive({
   message: undefined
 })
 
+const isMobile = () => {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        return true
+    } else {
+        return false
+    }
+}
+
 async function onSubmit(event: FormSubmitEvent<Schema>) {
   // Do something with data
   console.log(event.data)
@@ -38,11 +46,15 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 
 <template>
 
-  <div class="p-5 flex flex-col gap-6">
+<div class="md:px-20 md:flex gap-10 md:h-svh py-10">
+
+  <div class="p-5 flex flex-col gap-5">
     <div class="flex flex-col gap-3">
-      <h3 class="text-3xl font-bold">Contacta con nosotros!</h3>
+      <h2 class="text-5xl font-bold">Contacta con nosotros!</h2>
       <p class="text-lg">Rellena el formulario y nos pondremos en contacto contigo lo antes posible.</p>
     </div>
+
+    <img v-if="isMobile()" src="/public/contacto.webp" class="md:w-2/4 h-full object-cover md:rounded-md"/>
 
     <UForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
       <UFormGroup label="Nombre" name="name" size="xl">
@@ -81,14 +93,8 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     </UForm>
   </div>
 
-  <!-- Perdoname Toni por los br -->
-  <div class="p-5 flex flex-col gap-3">
-    <h3 class="text-2xl font-bold text-left">Información de contacto</h3>
-    <p class="text-left"><span class="font-semibold">Teléfono</span><br>123 456 789</p>
-    <p class="text-left"><span class="font-semibold">Email</span><br>info@valladosvera.com</p>
-    <p class="text-left"><span class="font-semibold">Horario comercial</span><br>Lunes a Viernes de 9:00 a 19:00</p>
-  </div>
+  <img v-if="!isMobile()" src="/public/contacto.webp" class="md:w-2/4 h-full object-cover md:rounded-md"/>
 
-  <Footer />
+</div>
 
 </template>

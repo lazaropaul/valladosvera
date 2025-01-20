@@ -28,7 +28,7 @@ const isMobile = () => {
                             class="text-xl text-left text-white rounded-md bg-orange-500 font-semibold pl-4" />
                     </div>
                     <div class="mt-10 md:px-10">
-                        <img src="/main5.jpeg" alt="Background Image" class="object-cover h-[60vh] w-full md:w-full" />
+                        <img src="/sobre_nosotros.webp" alt="Background Image" class="object-cover h-[60vh] w-full md:w-full" />
                     </div>
                 </div>
             </div>
@@ -39,12 +39,12 @@ const isMobile = () => {
                             <h2 class="text-5xl font-bold text-left">{{ title }}</h2>
                             <p class="text-xl text-left">{{ text }}</p>
                         </div>
-                        <Button button-text="Ver todos los materiales"
-                            class="text-xl text-left text-white rounded-md bg-orange-500 font-semibold pl-4" />
+                        <!-- <Button button-text="Ver todos los materiales"
+                            class="text-xl text-left text-white rounded-md bg-orange-500 font-semibold pl-4" /> -->
                     </div>
                     
                     <div class="mt-10 md:px-20 md:w-7/12">
-                        <img src="/main5.jpeg" alt="Background Image" class="object-cover h-[55vh] w-full md:w-full" />
+                        <img src="/sobre_nosotros.webp" alt="Background Image" class="object-cover h-[55vh] w-full md:w-full md:rounded-md" />
                     </div>
                 </div>
             </div>
