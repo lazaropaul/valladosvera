@@ -27,7 +27,10 @@ const state = reactive({
   email: undefined,
   city: undefined,
   clientType: undefined,
-  message: undefined
+  message: undefined,
+  isSubmitting: false,
+  submitError: null as string | null,
+  submitSuccess: false
 })
 
 const isMobile = () => {
@@ -39,8 +42,49 @@ const isMobile = () => {
 }
 
 async function onSubmit(event: FormSubmitEvent<Schema>) {
-  // Do something with data
-  console.log(event.data)
+  try {
+    state.isSubmitting = true
+    state.submitError = null
+    state.submitSuccess = false
+
+    // Validar el formulari
+    const validatedData = schema.parse(event.data)
+
+    // API endpoint
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(validatedData)
+    })
+
+    if (!response.ok) {
+      throw new Error(`Error: ${response.status} ${response.statusText}`)
+    }
+
+    // Handle successful submission
+    state.submitSuccess = true
+
+    // Optionally show success message to user
+    // You could emit an event or use a toast notification system
+    console.log('Form submitted successfully!')
+
+  } catch (error) {
+    // Handle validation errors from zod
+    if (error instanceof z.ZodError) {
+      state.submitError = error.errors[0].message
+    } 
+    // Handle other errors
+    else if (error instanceof Error) {
+      state.submitError = error.message
+    } else {
+      state.submitError = 'An unexpected error occurred'
+    }
+    console.error('Form submission error:', error)
+  } finally {
+    state.isSubmitting = false
+  }
 }
 </script>
 
