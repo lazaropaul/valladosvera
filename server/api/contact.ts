@@ -1,6 +1,6 @@
 // server/api/contact.ts
 import { z } from 'zod'
-import nodemailer from 'nodemailer'
+import nodemailer from 'nodemailer';
 
 const schema = z.object({
   name: z.string().regex(/^[a-zA-Z ]+$/, 'Introduce un nombre válido'),
@@ -18,19 +18,8 @@ export default defineEventHandler(async (event) => {
   
       // Validate the incoming data
       const validatedData = schema.parse(body)
-      
-      await sendEmail({
-        to: 'your@email.com',
-        subject: 'New Contact Form Submission',
-        text: `
-          Name: ${validatedData.name}
-          Email: ${validatedData.email}
-          Phone: ${validatedData.phone}
-          City: ${validatedData.city}
-          Client Type: ${validatedData.clientType}
-          Message: ${validatedData.message || 'No message provided'}
-        `
-      })
+
+
   
       // Or save to a database
       // await prisma.contact.create({
