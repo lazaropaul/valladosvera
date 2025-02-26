@@ -15,15 +15,8 @@
     "@nuxt/ui": "^2.18.4",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/tailwindcss": "latest",
-    "nodemailer": "^6.10.0",
     "nuxt": "^3.12.4",
-    "nuxt-mail": "5.1.1",
-    "nuxt-nodemailer": "^1.1.2",
-    "tailwindcss": "",
     "vue": "latest",
     "zod": "^3.23.8"
-  },
-  "devDependencies": {
-    "@types/nodemailer": "^6.4.17"
   }
 }
