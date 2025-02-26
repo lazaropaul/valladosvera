@@ -1,6 +1,9 @@
 <script setup lang="ts">
+//https://ui.nuxt.com/components/form
+
 import { z } from 'zod'
-import type { FormSubmitEvent } from '#ui/types'
+import type { Form, FormSubmitEvent } from '#ui/types'
+import axios from 'axios'
 
 /* No queria pero al final he acabado usando TypeScript porque
 la validacion de formularios se me hace más facil */
@@ -39,8 +42,25 @@ const isMobile = () => {
 }
 
 async function onSubmit(event: FormSubmitEvent<Schema>) {
-  // Do something with data
-  console.log(event.data)
+  //Borramos todos los datos introducidos en el formulario
+  Object.assign(state, {
+      name: undefined,
+      bussines: undefined,
+      phone: undefined,
+      email: undefined,
+      city: undefined,
+      clientType: undefined,
+      message: undefined
+    });
+
+  axios.post('/api/contact', event.data)
+    .then(() => {
+      alert('Formulario enviado correctamente')
+    })
+    .catch(() => {
+      alert('Error al enviar el formulario')
+    })
+
 }
 </script>
 

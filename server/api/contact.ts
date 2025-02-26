@@ -1,5 +1,6 @@
 // server/api/contact.ts
 import { z } from 'zod'
+import { sendMail } from '../utils/mailer'
 
 
 const schema = z.object({
@@ -19,23 +20,19 @@ export default defineEventHandler(async (event) => {
         // Validate the incoming data
         const validatedData = schema.parse(body)
 
-        Email.send({
-            Host : "smtp.mailendo.com",
-            Username : "username",
-            Password : "password",
-            To : 'them@website.com',
-            From : "you@isp.com",
-            Subject : "This is the subject",
-            Body : "And this is the body"
-        }).then(
-          message => console.log(message)
-        );
+        console.log(body)
+
+        const subject = "Nuevo mensaje web de " + validatedData.name
+        const html = "Nombre: " + validatedData.name + "<br>" + "Telefono: " + validatedData.phone + "<br>" + "Email: " + validatedData.email + "<br>" + "Ciudad: " + validatedData.city + "<br>" + "Tipo de cliente: " + validatedData.clientType + "<br>" + "Mensaje: " + validatedData.message
+
+        const send = sendMail(subject, html)
 
         // Return success response
         return {
             status: 'success',
             message: 'Form submitted successfully',
-            data: validatedData
+            data: {data: validatedData, 
+                    send: send}
         }
 
     } catch (error) {

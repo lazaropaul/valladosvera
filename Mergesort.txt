@@ -1,0 +1,32 @@
+//MergeSort sense recursivitat
+Precondition: 𝐴[1 ∶ 𝑛] an array of integers and 𝑚 the middle index of 𝐴 s.t. 𝐴[1 ∶ 𝑚] is sorted
+and 𝐴[𝑚 + 1 ∶ 𝑛] is sorted.
+
+Postcondition: 𝐵[1 ∶ 𝑛] in sorted order.
+procedure MERGE(𝐴[1 ∶ 𝑛], 𝑚)
+
+Create an auxiliary array 𝐵 of size 𝑛.
+
+⟨𝑖, 𝑗⟩ ← ⟨1, 𝑚 + 1⟩ //Inicialització de variables
+for 𝑘 = 1 to 𝑛 do
+if 𝑗 > 𝑛 then //Primer cas, hem consumit tots els elements d'un array
+𝐵[𝑘] ← 𝐴[𝑖]; 𝑖 ← 𝑖 + 1
+else if 𝑖 > 𝑚 then //Hem consumit tots els elements d'un altre
+𝐵[𝑘] ← 𝐴[𝑗]; 𝑗 ← 𝑗 + 1
+else if 𝐴[𝑖] < 𝐴[𝑗] then
+𝐵[𝑘] ← 𝐴[𝑖]; 𝑖 ← 𝑖 + 1
+else
+𝐵[𝑘] ← 𝐴[𝑗]; 𝑗 ← 𝑗 + 1
+return 𝐵
+
+
+//MergeSort amb recursivitat
+
+Precondition: 𝐴[1 ∶ 𝑛] an array of integers, 𝑠 and 𝑒 indexes s.t. 𝑠 ≤ 𝑒 ≤ 𝑛.
+Postcondition: 𝐴[𝑠 ∶ 𝑒] is sorted. //El A des del S fins al E estarà ordenat
+procedure MERGESORT(𝐴[1 ∶ 𝑛], 𝑠, 𝑒)
+if 𝑠𝑡𝑎𝑟𝑡 < 𝑒𝑛𝑑 then
+𝑚 ← ⌊(𝑠 + 𝑒)/2⌋ //Calculem el punt mig, fem un sort de les dues parts, ja podem fer el merge
+𝑀𝑒𝑟𝑔𝑒𝑆𝑜𝑟𝑡(𝐴, 𝑠, 𝑚)
+𝑀𝑒𝑟𝑔𝑒𝑆𝑜𝑟𝑡(𝐴, 𝑚 + 1, 𝑒)
+𝐴[𝑠 ∶ 𝑒] ← 𝑀𝑒𝑟𝑔𝑒(𝐴[𝑠 ∶ 𝑒], 𝑚)
