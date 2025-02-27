@@ -5,6 +5,8 @@ import { z } from 'zod'
 import type { Form, FormSubmitEvent } from '#ui/types'
 import axios from 'axios'
 
+const toast = useToast()
+
 /* No queria pero al final he acabado usando TypeScript porque
 la validacion de formularios se me hace más facil */
 
@@ -55,7 +57,11 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 
   axios.post('/api/contact', event.data)
     .then(() => {
-      alert('Formulario enviado correctamente')
+      toast.add({
+        title: 'Formulario enviado correctamente',
+        //message: 'Nos pondremos en contacto contigo lo antes posible',
+        //type: 'success'
+      })
     })
     .catch(() => {
       alert('Error al enviar el formulario')

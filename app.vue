@@ -4,9 +4,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
-  <div>
+  <div class="p-0">
     <NuxtLayout>
-      <NuxtPage/>
+      <UContainer class="!px-0 !mx-0 !max-w-full !min-w-full">
+        <NuxtPage />
+      </UContainer>
     </NuxtLayout>
+    <UModals />
+    <UNotifications />
   </div>
 </template>

@@ -35,7 +35,7 @@
 
     <div class="flex justify-between gap-4 p-4 bg-[#272727]">
         <p class="text-white">© 2024 Vallados Vera</p>
-        <p class="text-white">Made by <NuxtLink to="https://github.com/rikwsb" class="underline">@rikwsb</NuxtLink></p>
+        <p class="text-white">Made by <NuxtLink to="https://github.com/lazaropaul" class="underline">@lazaropaul</NuxtLink></p>
     </div>
 
 </template>

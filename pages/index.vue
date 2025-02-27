@@ -1,4 +1,8 @@
 <script setup>
+import ImageModalComponent from '~/components/ImageModalComponent.vue';
+
+
+const modal = useModal();
 
 const title2 = "Sobre Nosotros";
 const text2 = "Somos especialistas en la fabricación e instalación de vallados, cerramientos y puertas metálicas de alta calidad. " +
@@ -7,6 +11,11 @@ const text2 = "Somos especialistas en la fabricación e instalación de vallados
 
 const title1 = "Servicios";
 const text1 = "Seas particular o empresa, adaptamos tu proyecto para que pueda satisfacer tus necesidades";
+
+const openModal = (id) => {
+    console.log("Apeerto modal con id: ", id);
+    modal.open(ImageModalComponent, {id});
+}
 
 </script>
 
@@ -34,8 +43,8 @@ const text1 = "Seas particular o empresa, adaptamos tu proyecto para que pueda s
                     <div class="flex-col justify-between w-full px-10">
                         <ul class="justify-between md:flex md:w-full md:justify-around">
                             <li class="md:p-5">
-                                <CardWithButton title="Instalación de estructuras, puertas y vallados" text="Instalación personalizada de vallados y estructuras metalicas"/>
-                            </li>
+                                <CardWithButton @open-modal="openModal(1)" title="Instalación de estructuras, puertas y vallados" text="Instalación personalizada de vallados y estructuras metalicas"/>
+                            </li> 
                             <li class="md:p-5">
                                 <CardWithButton title="Mantenimiento y reparación" text="Instalación personalizada de vallados y estructuras metalicas"/>
                             </li>
