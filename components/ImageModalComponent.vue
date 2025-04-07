@@ -2,8 +2,8 @@
         <UModal>
             <UCard>
                 <div class="space-y-2">
-                    <p>This modal was opened programmatically !</p>
-                    <p>Count:</p>
+                    <p>Modal obert!</p>
+                    <p>Aqui van les fotos</p>
                 </div>
             </UCard>
         </UModal>
