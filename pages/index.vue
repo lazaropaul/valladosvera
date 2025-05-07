@@ -55,7 +55,7 @@
             class="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
             <div class="container flex h-16 items-center justify-between">
                 <div class="flex items-center gap-2">
-                    <img src="/placeholder.svg?height=40&width=150" alt="Vallados Vera Logo" class="h-10 w-auto" />
+                    <img src="/logo3.svg?height=25&width=75" alt="Vallados Vera Logo" class="h-24 w-auto" />
                 </div>
                 <nav class="hidden md:flex items-center gap-6">
                     <a href="#" class="text-sm font-medium transition-colors hover:text-orange-500">
@@ -92,7 +92,7 @@
             <section class="relative">
                 <div class="absolute inset-0 bg-black/40 z-10"></div>
                 <div class="relative h-[70vh] overflow-hidden">
-                    <img src="/placeholder.svg?height=1080&width=1920" alt="Vallados y Cerramientos de Calidad"
+                    <img src="/cerramiento.webp" alt="Vallados y Cerramientos de Calidad"
                         class="h-full w-full object-cover" />
                 </div>
                 <div class="absolute inset-0 z-20 flex items-center">
@@ -131,22 +131,8 @@
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div v-for="(service, index) in services" :key="index"
                             class="bg-white rounded-lg overflow-hidden shadow-md transition-all hover:shadow-lg">
-                            <div class="h-48 overflow-hidden">
-                                <img :src="service.image" :alt="service.title"
-                                    class="h-full w-full object-cover transition-transform hover:scale-105" />
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold mb-2">{{ service.title }}</h3>
-                                <p class="text-gray-600 mb-4">{{ service.description }}</p>
-                                <a href="#" class="inline-flex items-center text-orange-500 hover:text-orange-600">
-                                    Más información
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="ml-1 h-4 w-4">
-                                        <polyline points="9 18 15 12 9 6" />
-                                    </svg>
-                                </a>
-                            </div>
+                            <ServiceCard :title="service.title" :description="service.description"
+                                :image="service.image" />
                         </div>
                     </div>
                 </div>
@@ -173,17 +159,10 @@
                         </button>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div v-for="item in 6" :key="item" class="group relative overflow-hidden rounded-lg">
-                            <img :src="`/placeholder.svg?height=400&width=600&text=Proyecto ${item}`"
-                                :alt="`Proyecto ${item}`"
-                                class="h-64 w-full object-cover transition-transform group-hover:scale-105" />
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                                <div class="text-white">
-                                    <h3 class="font-bold text-lg">Proyecto en Málaga</h3>
-                                    <p class="text-sm text-white/80">Vallado perimetral y puerta automática</p>
-                                </div>
-                            </div>
+                        <div v-for="project in projects" :key="project" class="group relative overflow-hidden rounded-lg">
+                            <ProjectCard :image="project.image"
+                                :title="`Proyecto ${project.title}`"
+                                :description="`Projecte ${project.description}`" />
                         </div>
                     </div>
                 </div>
@@ -202,21 +181,8 @@
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div v-for="(testimonial, index) in testimonials" :key="index"
                             class="bg-white p-6 rounded-lg shadow">
-                            <div class="flex items-center space-x-1 mb-4">
-                                <svg v-for="star in 5" :key="star" class="w-5 h-5 text-yellow-500" fill="currentColor"
-                                    viewBox="0 0 20 20">
-                                    <path
-                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <p class="text-gray-600 mb-4">"{{ testimonial.text }}"</p>
-                            <div class="flex items-center">
-                                <div class="ml-3">
-                                    <p class="text-sm font-medium">{{ testimonial.name }}</p>
-                                    <p class="text-xs text-gray-500">{{ testimonial.location }}</p>
-                                </div>
-                            </div>
+                            <TestimonialCard :name="testimonial.name" :description="testimonial.text"
+                                :location="testimonial.location" :stars="5" />
                         </div>
                     </div>
                 </div>
@@ -383,18 +349,50 @@ const services = ref([
     {
         title: "Vallados Metálicos",
         description: "Vallados de alta seguridad para todo tipo de propiedades",
-        image: "/placeholder.svg?height=400&width=600",
+        image: "/vallado_sarria.webp?height=400&width=600",
     },
     {
         title: "Puertas Automáticas",
         description: "Puertas con sistemas de automatización de última generación",
-        image: "/placeholder.svg?height=400&width=600",
+        image: "/puerta.webp",
     },
     {
         title: "Cerramientos",
         description: "Soluciones personalizadas para cerramientos de parcelas y jardines",
-        image: "/placeholder.svg?height=400&width=600",
+        image: "/sobre_nosotros.webp?height=400&width=600",
     },
+]);
+
+const projects = ref([{
+    title: "Proyecto 1",
+    description: "Descripción del proyecto 1",
+    image: "/placeholder.svg?height=400&width=600",
+},
+{
+    title: "Proyecto 2",
+    description: "Descripción del proyecto 2",
+    image: "/placeholder.svg?height=400&width=600",
+},
+{
+    title: "Proyecto 3",
+    description: "Descripción del proyecto 3",
+    image: "/placeholder.svg?height=400&width=600",
+},
+{
+    title: "Proyecto 4",
+    description: "Descripción del proyecto 4",
+    image: "/placeholder.svg?height=400&width=600",
+},
+{
+    title: "Proyecto 5",
+    description: "Descripción del proyecto 5",
+    image: "/placeholder.svg?height=400&width=600",
+},
+{
+    title: "Proyecto 6",
+    description: "Descripción del proyecto 6",
+    image: "/placeholder.svg?height=400&width=600",
+},
 ]);
 
 const testimonials = ref([

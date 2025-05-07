@@ -1,21 +1,29 @@
 <script setup>
 
-    defineProps({
+    const props = defineProps({
         image: String,
         title: String,
-        subtitle: String
+        description: String,
     })
 
 </script>
 
 <template>
-
-    <div class="max-w-sm rounded overflow-hidden shadow-lg">
-        <img class="w-full" alt="Sunset in the mountains">
-        <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2">{{ title }}</div>
-            <p class="text-gray-700 text-base">{{ text }}</p>
-        </div>
-
-    </div>
+<!-- service.image, service.title, service.description -->
+<div class="h-48 overflow-hidden">
+                                <img :src="props.image" :alt="props.title"
+                                    class="h-full w-full object-cover transition-transform hover:scale-105" />
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">{{ props.title }}</h3>
+                                <p class="text-gray-600 mb-4">{{ props.description }}</p>
+                                <a href="#" class="inline-flex items-center text-orange-500 hover:text-orange-600">
+                                    Más información
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="ml-1 h-4 w-4">
+                                        <polyline points="9 18 15 12 9 6" />
+                                    </svg>
+                                </a>
+                            </div>
 </template>
