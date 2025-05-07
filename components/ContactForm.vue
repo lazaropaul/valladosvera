@@ -3,7 +3,8 @@
 
 import { z } from 'zod'
 import type { Form, FormSubmitEvent } from '#ui/types'
-import axios from 'axios'
+import { Email } from '@/utils/smtp.js'
+
 
 const toast = useToast()
 
@@ -43,9 +44,39 @@ const isMobile = () => {
     }
 }
 
+const email = {
+  Host : "s1.maildns.net",
+  Username : "info@valladosvera.com",
+  Password : "3!pvhtrfCrgB",
+  //SecureToken: 'b4c4d717-de81-4b74-8f3b-c4f0fcb78e45',
+  To: 'info@valladosvera.com',
+  From: 'info@valladosvera.com',
+  Subject: 'Test email',
+  Body: `Hola Paul Lazaro, ${state.name} se ha puesto en contacto contigo. \n
+      Empresa: ${state.bussines} \n
+      Telefono: ${state.phone} \n
+      Email: ${state.email} \n
+      Ciudad: ${state.city} \n
+      Tipo de cliente: ${state.clientType} \n
+      Mensaje: ${state.message}`
+}
+
 async function onSubmit(event: FormSubmitEvent<Schema>) {
+
+Email.send(email).then(message => {
+  console.log(message)
+    if (message === 'OK') {
+      toast.add({title: 'Email enviado correctamente'})
+    } else {
+      toast.add({title: 'Error al enviar el email'})
+    }
+  }).catch(error => {
+    console.log(error)
+    toast.add({title: 'Error al enviar el email'})
+  })
+
   //Borramos todos los datos introducidos en el formulario
-  Object.assign(state, {
+  /* Object.assign(state, {
       name: undefined,
       bussines: undefined,
       phone: undefined,
@@ -53,20 +84,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       city: undefined,
       clientType: undefined,
       message: undefined
-    });
-
-  axios.post('/api/contact', event.data)
-    .then(() => {
-      toast.add({
-        title: 'Formulario enviado correctamente',
-        //message: 'Nos pondremos en contacto contigo lo antes posible',
-        //type: 'success'
-      })
-    })
-    .catch(() => {
-      alert('Error al enviar el formulario')
-    })
-
+    }); */
 }
 </script>
 
