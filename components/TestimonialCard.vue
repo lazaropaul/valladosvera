@@ -17,7 +17,7 @@ const props = defineProps({
     </div>
     <p class="text-gray-600 mb-4">"{{ props.description }}"</p>
     <div class="flex items-center">
-        <div class="ml-3">
+        <div class="">
             <p class="text-sm font-medium">{{ props.name }}</p>
             <p class="text-xs text-gray-500">{{ props.location }}</p>
         </div>

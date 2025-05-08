@@ -16,7 +16,6 @@ const schema = z.object({
   phone: z.string().min(9, 'El telefono ha de tener como minimo 9 numeros'), //TODO: Validar telefono
   email: z.string().email('Email no válido'),
   city: z.string().min(3, 'La ciudad ha de tener como minimo 3 caracteres'),
-  clientType: z.string().min(1, 'Selecciona un tipo de cliente'),
   message: z.string().max(200, 'El mensaje puede contener como máximo 200 caracteres').optional(),
 })
 
@@ -90,7 +89,7 @@ Email.send(email).then(message => {
 
 <template>
 
-<div class="md:px-20 md:flex gap-10 md:h-svh py-10">
+<div class=" md:flex gap-10 md:h-auto">
 
   <div class="p-5 flex flex-col gap-5">
     <div class="flex flex-col gap-3">
@@ -105,9 +104,9 @@ Email.send(email).then(message => {
         <UInput v-model="state.name" autocapitalize="on" size="md"/>
       </UFormGroup>
 
-      <UFormGroup label="Empresa" name="bussines" size="xl">
+      <!-- <UFormGroup label="Empresa" name="bussines" size="xl">
         <UInput v-model="state.bussines" autocapitalize="on" size="md"/>
-      </UFormGroup>
+      </UFormGroup> -->
 
       <UFormGroup label="Telefono" name="phone" size="xl">
         <UInput v-model="state.phone" type="tel" size="md"/>
@@ -121,9 +120,9 @@ Email.send(email).then(message => {
         <UInput v-model="state.city" autocapitalize="on" size="md"/>
       </UFormGroup>
 
-      <UFormGroup label="Tipo cliente" name="clientType" size="xl">
+      <!-- <UFormGroup label="Tipo cliente" name="clientType" size="xl">
         <USelect v-model="state.clientType" :options="clientTypes" size="md"/>
-      </UFormGroup>
+      </UFormGroup> -->
 
       <UFormGroup label="Mensaje" name="message" size="xl">
         <UTextarea v-model="state.message" placeholder="Puedes explicar-nos aqui tus necesidades" optional size="md"/>
@@ -137,7 +136,7 @@ Email.send(email).then(message => {
     </UForm>
   </div>
 
-  <img v-if="!isMobile()" src="/public/contacto.webp" class="md:w-2/4 h-full object-cover md:rounded-md"/>
+  <img v-if="!isMobile()" src="/public/contacto.webp" class="md:w-2/4 object-cover md:rounded-md"/>
 
 </div>
 

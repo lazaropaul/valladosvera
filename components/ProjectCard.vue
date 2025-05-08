@@ -8,7 +8,8 @@
 </script>
 
 <template>
-    <img :src="props.image" :alt="`Proyecto ${props.title}`"
+    <a @click="$emit('openModal')">
+        <img :src="props.image" :alt="`Proyecto ${props.title}`"
         class="h-64 w-full object-cover transition-transform group-hover:scale-105"
         />
     <div
@@ -18,4 +19,6 @@
             <p class="text-sm text-white/80">{{ props.description }}</p>
         </div>
     </div>
+</a>
+    
 </template>
