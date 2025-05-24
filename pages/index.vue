@@ -20,16 +20,14 @@
                                 Solicita tu presupuesto personalizado <span class="bg-orange-500 p-1 rounded ">gratuito</span> y sin compromiso.
                             </p>
                             <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                                <button
-                                    class="px-6 py-3 text-base font-medium rounded-md bg-orange-500 hover:bg-orange-600 text-white"
-                                    @click="scrollTo('contact')">
+                                <NuxtLink to="/#contact"
+                                    class="px-6 py-3 text-base font-medium rounded-md bg-orange-500 hover:bg-orange-600 text-white">
                                     Solicitar Presupuesto
-                                </button>
-                                <button
-                                    class="px-6 py-3 text-base font-medium rounded-md border border-white text-white hover:bg-white/10"
-                                    @click="scrollTo('call')">
+                                </NuxtLink>
+                                <NuxtLink
+                                    class="px-6 py-3 text-base font-medium rounded-md border border-white text-white hover:bg-white/10">
                                     Contactar
-                                </button>
+                                </NuxtLink>
                             </div>
                         </div>
                     </div>
@@ -148,7 +146,7 @@
     </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue';
 import ImageModalComponent from '~/components/ImageModalComponent.vue';
 
@@ -239,21 +237,6 @@ const testimonials = ref([
         location: "Málaga",
         text: "Recomiendo totalmente sus servicios. Atentos, profesionales y con precios muy competitivos.",
     },
-]);
-
-const footerServices = [
-    "Vallados Metálicos",
-    "Puertas Automáticas",
-    "Cerramientos",
-    "Mantenimiento",
-];
-
-const footerLinks = ref([
-    "Inicio",
-    "Servicios",
-    "Proyectos",
-    "Nosotros",
-    "Contacto",
 ]);
 
 </script>
