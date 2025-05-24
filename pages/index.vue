@@ -1,41 +1,6 @@
 <template>
     <div class="flex min-h-screen flex-col">
         <!-- Header/Navigation -->
-        <header
-            class="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-            <div class="container flex h-16 items-center justify-between">
-                <div class="flex items-center gap-2">
-                    <img src="/logo3.svg?height=25&width=75" alt="Vallados Vera Logo" class="h-24 w-auto" />
-                </div>
-                <nav class="hidden md:flex items-center gap-6">
-                    <button class="text-sm font-medium transition-colors hover:text-orange-500" @click="scrollTo('#')">
-                        Inicio
-                    </button>
-                    <button class="text-sm font-medium transition-colors hover:text-orange-500" @click="scrollTo('services')">
-                        Servicios
-                    </button>
-                    <button class="text-sm font-medium transition-colors hover:text-orange-500" @click="scrollTo('projects')">
-                        Proyectos
-                    </button>
-                    <!-- <a href="#" class="text-sm font-medium transition-colors hover:text-orange-500" @click="scrollTo('contact')">
-                        Nosotros
-                    </a> -->
-                    <button class="px-4 py-2 rounded-md bg-orange-500 hover:bg-orange-600 text-white" @click="scrollTo('contact')">
-                        Contactar
-                    </button>
-                </nav>
-                <button class="md:hidden p-2 rounded-md border border-gray-200" @click="toggleMobileMenu">
-                    <span class="sr-only">Toggle menu</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="h-6 w-6">
-                        <line x1="4" x2="20" y1="12" y2="12" />
-                        <line x1="4" x2="20" y1="6" y2="6" />
-                        <line x1="4" x2="20" y1="18" y2="18" />
-                    </svg>
-                </button>
-            </div>
-        </header>
 
         <main class="flex-1">
             <!-- Hero Section -->
@@ -100,7 +65,7 @@
                             <p class="text-lg text-gray-600 max-w-2xl">Descubra algunos de nuestros trabajos más
                                 recientes</p>
                         </div>
-                        <button class="mt-4 md:mt-0 flex items-center px-4 py-2 border rounded-md hover:bg-gray-50">
+                        <NuxtLink to="/proyectos" class="mt-4 md:mt-0 flex items-center px-4 py-2 border rounded-md hover:bg-gray-50">
                             Ver todos los proyectos
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -108,7 +73,7 @@
                                 <line x1="5" y1="12" x2="19" y2="12" />
                                 <polyline points="12 5 19 12 12 19" />
                             </svg>
-                        </button>
+                        </NuxtLink>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <div v-for="project in projects" :key="project"
@@ -180,17 +145,10 @@
             </section>
 
         </main>
-
-
-
-        <!-- Footer -->
-        <footer class="bg-gray-900 text-white py-12">
-            <Footer :footerServices="footerServices" :footerLinks="footerLinks" /> <!-- TODO: Pass the props to Footer component -->
-        </footer>
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue';
 import ImageModalComponent from '~/components/ImageModalComponent.vue';
 
@@ -208,10 +166,6 @@ const openModal = (image) => {
         image: image,
         alt: "Imagen del proyecto"
     });
-};
-
-const toggleMobileMenu = () => {
-    mobileMenuOpen.value = !mobileMenuOpen.value;
 };
 
 const services = ref([
@@ -301,14 +255,6 @@ const footerLinks = ref([
     "Nosotros",
     "Contacto",
 ]);
-
-const scrollTo = (id) => {
-  const el = document.getElementById(id);
-  if (el) {
-    const y = el.getBoundingClientRect().top + window.pageYOffset - 50;
-    window.scrollTo({ top: y, behavior: 'smooth' });
-  }
-}
 
 </script>
 
