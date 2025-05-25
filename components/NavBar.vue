@@ -10,7 +10,7 @@
             <NuxtLink to="/#services" class="text-sm font-medium transition-colors hover:text-orange-500">
                 Servicios
             </NuxtLink>
-            <NuxtLink to="/proyectos" class="text-sm font-medium transition-colors hover:text-orange-500">
+            <NuxtLink to="/#projects" class="text-sm font-medium transition-colors hover:text-orange-500">
                 Proyectos
             </NuxtLink>
             <!-- <a href="#" class="text-sm font-medium transition-colors hover:text-orange-500" @click="scrollTo('contact')">

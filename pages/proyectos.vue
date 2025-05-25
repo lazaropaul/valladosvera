@@ -271,7 +271,8 @@ const getCategoriaName = (categoriaId) => {
 const verDetalles = (proyectoId) => {
   proyectoSeleccionado.value = proyectos.value.find(p => p.id === proyectoId)
   // Scroll to top para evitar problemas en móviles
-  window.scrollTo(0, 0)
+  //window.scrollTo(0, 0)
+  
   // Bloquear scroll del body
   document.body.style.overflow = 'hidden'
   console.log('Proyecto seleccionado:', proyectoSeleccionado.value)

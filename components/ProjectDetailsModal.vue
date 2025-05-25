@@ -1,12 +1,17 @@
 <template>
   <div v-if="props.proyectoSeleccionado"
     class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
-    @click.self="$emit('cerrarModal')">
+    @click.self="$emit('cerrar')">
     <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
       <div class="relative">
-        <button @click="$emit('cerrarModal')"
+        <button @click="$emit('cerrar')"
           class="absolute top-4 right-4 bg-white rounded-full p-2 shadow-md hover:bg-gray-100">
-          <XIcon class="h-6 w-6 text-gray-700" />
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+
         </button>
         <img :src="props.proyectoSeleccionado.imagen" :alt="props.proyectoSeleccionado.titulo"
           class="w-full h-64 md:h-96 object-cover" />
@@ -52,7 +57,7 @@
         <div class="mt-8 flex justify-center">
           <NuxtLink to="/#contact"
             class="bg-orange-500 hover:bg-orange-600 text-white font-medium py-3 px-6 rounded-md transition-colors duration-200"
-            @click="$emit('cerrarModal')">
+            @click="$emit('cerrar')">
             Solicitar Presupuesto
           </NuxtLink>
         </div>
