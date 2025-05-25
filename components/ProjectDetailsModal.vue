@@ -48,7 +48,7 @@
           <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
             <div v-for="(imagen, index) in props.proyectoSeleccionado.galeria" :key="index"
               class="relative pb-[75%] overflow-hidden rounded-lg cursor-pointer" @click="ampliarImagen(imagen)">
-              <img :src="imagen" :alt="`Imagen ${index + 1} del proyecto ${props.proyectoSeleccionado.titulo}`"
+              <NuxtImg loading="lazy" :src="imagen" :alt="`Imagen ${index + 1} del proyecto ${props.proyectoSeleccionado.titulo}`"
                 class="absolute inset-0 w-full h-full object-cover" />
             </div>
           </div>

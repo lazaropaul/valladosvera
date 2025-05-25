@@ -10,4 +10,3 @@ export default defineNuxtConfig({
     preference: 'light'
   }
 })
-

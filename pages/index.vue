@@ -203,7 +203,7 @@ const services = ref([
     {
         title: "Vallados de PVC",
         description: "Soluciones modernas, estéticas y duraderas",
-        image: "/main5.jpeg",
+        image: "/cerramiento_pvc/4.jpg",
     },
 ]);
 
@@ -240,12 +240,12 @@ const proyectos = ref([
         id: 1,
         titulo: 'Vallado Perimetral Residencial',
         categoriaId: 'vallados',
-        imagen: '/cerramiento_sarria/4.JPEG',
+        imagen: '/cerramiento_sarria/4.jpg',
         galeria: [
-            '/cerramiento_sarria/4.JPEG',
-            '/cerramiento_sarria/3.JPEG',
-            '/cerramiento_sarria/2.JPEG',
-            '/cerramiento_sarria/1.JPEG'
+            '/cerramiento_sarria/4.jpg',
+            '/cerramiento_sarria/3.jpg',
+            '/cerramiento_sarria/2.jpg',
+            '/cerramiento_sarria/1.jpg'
         ],
         ubicacion: 'Barcelona',
         descripcionCorta: 'Instalación de vallado perimetral de malla metálica con postes de acero galvanizado.',
@@ -262,12 +262,12 @@ const proyectos = ref([
         id: 2,
         titulo: 'Cerramiento de Terraza',
         categoriaId: 'cerramientos',
-        imagen: '/cerramiento_cunit/2.JPEG',
+        imagen: '/cerramiento_cunit/2.jpg',
         galeria: [
-            '/cerramiento_cunit/4.JPEG',
-            '/cerramiento_cunit/3.JPEG',
-            '/cerramiento_cunit/2.JPEG',
-            '/cerramiento_cunit/1.JPEG'
+            '/cerramiento_cunit/4.jpg',
+            '/cerramiento_cunit/3.jpg',
+            '/cerramiento_cunit/2.jpg',
+            '/cerramiento_cunit/1.jpg'
         ],
         ubicacion: 'Cunit, Tarragona',
         descripcionCorta: 'Cerramiento metálico soldado para patio con estructura robusta y diseño personalizado.',
@@ -285,12 +285,12 @@ const proyectos = ref([
         id: 3,
         titulo: 'Vallado Disimulado Residencial',
         categoriaId: 'vallados',
-        imagen: '/cerramiento_cobrera/2.JPEG',
+        imagen: '/cerramiento_cobrera/2.jpg',
         galeria: [
-            '/cerramiento_cobrera/4.JPEG',
-            '/cerramiento_cobrera/3.JPEG',
-            '/cerramiento_cobrera/2.JPEG',
-            '/cerramiento_cobrera/1.JPEG'
+            '/cerramiento_cobrera/4.jpg',
+            '/cerramiento_cobrera/3.jpg',
+            '/cerramiento_cobrera/2.jpg',
+            '/cerramiento_cobrera/1.jpg'
         ],
         ubicacion: 'Baix Llobregat, Barcelona',
         descripcionCorta: 'Vallado disimulado para vivienda con estructura metálica oculta y acabado vegetal decorativo.',
@@ -306,11 +306,11 @@ const proyectos = ref([
         id: 4,
         titulo: 'Vallado ganadero',
         categoriaId: 'vallados',
-        imagen: '/cerramiento_santcu/1.JPEG',
+        imagen: '/cerramiento_santcu/1.jpg',
         galeria: [
-            '/cerramiento_santcu/1.JPEG',
-            '/cerramiento_santcu/2.JPEG',
-            '/cerramiento_santcu/3.JPEG'
+            '/cerramiento_santcu/1.jpg',
+            '/cerramiento_santcu/2.jpg',
+            '/cerramiento_santcu/3.jpg'
         ],
         ubicacion: 'Sant Cugat del Vallès, Barcelona',
         descripcionCorta: 'Vallado ganadero instalado en tierra para delimitar terreno y proteger animales.',
@@ -328,12 +328,12 @@ const proyectos = ref([
         id: 5,
         titulo: 'Vallado PVC',
         categoriaId: 'vallados',
-        imagen: '/cerramiento_pvc/4.JPEG',
+        imagen: '/cerramiento_pvc/4.jpg',
         galeria: [
-            '/cerramiento_pvc/4.JPEG',
-            '/cerramiento_pvc/3.JPEG',
-            '/cerramiento_pvc/2.JPEG',
-            '/cerramiento_pvc/1.JPEG'
+            '/cerramiento_pvc/4.jpg',
+            '/cerramiento_pvc/3.jpg',
+            '/cerramiento_pvc/2.jpg',
+            '/cerramiento_pvc/1.jpg'
         ],
         ubicacion: 'Cunit, Tarragona',
         descripcionCorta: 'Vallado de PVC decorativo y funcional para cerramiento perimetral de vivienda.',
@@ -350,12 +350,12 @@ const proyectos = ref([
         id: 6,
         titulo: 'Puertas de emergencia y acceso',
         categoriaId: 'puertas',
-        imagen: '/puertas_santboi/3.JPEG',
+        imagen: '/puertas_santboi/3.jpg',
         galeria: [
-            '/puertas_santboi/1.JPEG',
-            '/puertas_santboi/2.JPEG',
-            '/puertas_santboi/3.JPEG',
-            '/puertas_santboi/4.JPEG'
+            '/puertas_santboi/1.jpg',
+            '/puertas_santboi/2.jpg',
+            '/puertas_santboi/3.jpg',
+            '/puertas_santboi/4.jpg'
         ],
          ubicacion: 'Sant Boi de Llobregat, Barcelona',
         descripcionCorta: 'Instalación de puertas de emergencia y acceso con sistemas de seguridad certificados.',

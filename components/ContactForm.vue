@@ -44,9 +44,6 @@ const isMobile = () => {
 }
 
 const email = {
-  Host : "s1.maildns.net",
-  Username : "info@valladosvera.com",
-  Password : "3!pvhtrfCrgB",
   //SecureToken: 'b4c4d717-de81-4b74-8f3b-c4f0fcb78e45',
   To: 'info@valladosvera.com',
   From: 'info@valladosvera.com',
@@ -85,6 +82,10 @@ Email.send(email).then(message => {
       message: undefined
     }); */
 }
+
+  function showToast() {
+    toast.add({title: "No se ha podido enviar el formulario, usa los metodos de contacto de más abajo"})
+  }
 </script>
 
 <template>
@@ -130,7 +131,7 @@ Email.send(email).then(message => {
 
       <UCheckbox label="Acepto la politica de privacidad" help="Haciendo clic en esta casilla estas aceptando nuestra politica de privacidad" required/>
 
-      <UButton type="submit" block class="w-full font-bold text-md"> <!-- Centrar texto boton -->
+      <UButton type="submit" block class="w-full font-bold text-md" @click="showToast()"> <!-- Centrar texto boton -->
         Enviar
       </UButton>
     </UForm>
